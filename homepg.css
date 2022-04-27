@@ -1,0 +1,111 @@
+/* Container for navigation bar */
+.container 
+{
+    overflow: hidden;
+    background-color:#41C5AF;
+    font-family: Arial;
+}
+
+.container a 
+{
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 20px 70px;
+    text-decoration: none;
+}
+/* Drop down button */
+.dropdown 
+{
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn 
+{
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 20px 45px;
+    background-color: inherit;
+}
+
+.container a:hover, .dropdown:hover .dropbtn 
+{
+    background-color: ;
+}
+
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a 
+{
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover 
+{
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
+
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1400px;
+  position: center;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot 
+{
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active 
+{
+  background-color: #717171;
+}
+
+.fade 
+{
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+fieldset 
+{
+  font-size:15px;
+  padding:10px;
+  width:250px;
+  line-height:1.8;
+}

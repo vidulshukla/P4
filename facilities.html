@@ -1,0 +1,206 @@
+<html>
+<head><title>Facility</title>
+<link rel="stylesheet" type="text/css" href="homepg.css">
+<link rel="stylesheet" type="text/css" href="w3.css">
+<style>
+body 
+{
+    background: url("bg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}  
+.content 
+{
+    max-width: 900px;
+    margin: auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid black;   
+    opacity: 0.8;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+o{
+    opacity: 1;
+}
+
+p{
+    margin: 5%;
+    color: #000000;
+}
+
+/* Slideshow */
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 900px;
+  position: center;
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: center;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+
+<body>
+
+<center>
+<br>
+<img src="logo.png" height="100">
+<sub style="font-color:#CE5836;">We care for your health</sub>
+</center>
+<br>
+<div class="container">
+<b>  <a href="index.html">Home</a>
+  <a href="facilities.html">Facilities</a></b>
+  <div class="dropdown">
+    <button class="dropbtn"><b>Department</button>
+    <div class="dropdown-content">
+      <a href="Cardiology.html">Cardiology</a>
+      <a href="Neurology.html">Neurology</a>
+      <a href="ophthamology.html">Ophthalmology</a>
+      <a href="ent.html">ENT</a>
+      <a href="Orthodontics.html">Orthodontics</a>
+    </div>
+  </div> 
+  <a href="appointment.html">Appointment</a>
+  <a href="contactus.html">Contact Us</a>
+  <a href="aboutus.html">About Us</a>
+</div>
+<br>
+<br>
+<div class="content">
+<img src="facil.jpg" width="880" height="200">
+<p>Medicare hospital  is deeply committed to the highest standards of excellence in medical care.
+We give you here a few details about our hospital so that your experience at our hospital is comfortable and pleasant.</p>
+<h3>Registration</h3>
+<p>Kindly complete the initial patient record and please supply all requested data accurately.A hospital file will be created and a UHID card (Unique Hospital Identification Card) will be issued to you.</p>
+<h3>Types of rooms</h3>
+<br><br>
+<div class="slideshow-container">
+<center>
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="platinum.png" height="400" width="800">
+  <div class="text">ECONOMY CLASS</div>
+</div>
+</center>
+<center>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="apollo.png" height="400" width="800">
+  <div class="text">A CLASS</div>
+</div>
+</center>
+<center>
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="executive.png" height="400" width="800">
+  <div class="text">DELUXE A SUITE</div>
+</div>
+</center>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+<p>Cuisine to suit international tastes is an integral part of our food and special beverage service. The nursing care is, in itself, a matter of high standard in patient care.</p>
+
+<h3>Special Facilities provided</h3>
+<br>
+MediCare provides the special facilities, apart from accomodation to outstation patients and relatives for their convenience.
+<br>
+These are the special facilities:
+<ul type="square">
+<b><li>Guest dining hall</li>
+<li>Parking</li>
+<li>ATM Facility</li>
+<li>Locker Facility</li>
+<li>Cuisine to suit palate</li>
+</ul>
+
+</body>
+</html>
