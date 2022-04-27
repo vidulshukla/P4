@@ -1,0 +1,116 @@
+<html>
+<head><title> MediCare </title></head>
+<link rel="stylesheet" type="text/css" href="homepg.css">
+<link rel="stylesheet" type="text/css" href="w3.css">
+<style>
+body 
+{
+    background: url("bg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}  
+</style>
+<body>
+<center>
+<br>
+<img src="logo.png" height="90">
+<sub style="font-color:#CE5836;">We care for your health</sub>
+</center>
+<br>
+<div class="container">
+<b>  <a href="index.html">Home</a>
+  <a href="facilities.html">Facilities</a></b>
+  <div class="dropdown">
+    <button class="dropbtn"><b>Department</button>
+    <div class="dropdown-content">
+      <a href="Cardiology.html">Cardiology</a>
+      <a href="Neurology.html">Neurology</a>
+      <a href="ophthamology.html">Ophthalmology</a>
+      <a href="ent.html">ENT</a>
+      <a href="Orthodontics.html">Orthodontics</a>
+    </div>
+  </div> 
+  <a href="appointment.html">Appointment</a>
+  <a href="contactus.html">Contact Us</a>
+  <a href="aboutus.html">About Us</a>
+</div>
+<br>
+<center>
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <img src="hospital.jpg" height="400" width="100%">
+</div>
+<div class="mySlides fade">
+  <img src="hospital1.jpg" height="400" width="100%">
+</div>
+<div class="mySlides fade">
+  <img src="hospital2.jpg" height="400" width="100%">
+</div>
+</center>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+<center>
+<table width="50%" align="center" border="0">
+	<tr align="center">
+	<th  colspan="3">Visting Hours</th>
+	<br>
+	</tr>
+	<tr align="center">
+		<th>Section</th>
+		<th>Monday to Saturday</th>
+		<th>Sunday</th>
+	</tr>
+	<tr align="center">
+		<td>ICU</td>
+		<td>5 PM to 7 PM</td>
+		<td>10 AM to 11 AM / 5 PM to 7 PM</td>
+	</tr>
+	<tr align="center">
+		<td>Ward</td>
+		<td>4 PM to 7 PM</td>
+		<td>10 AM to 11 AM / 4 PM to 7 PM</td>
+	</tr>
+</table>
+<footer class="w3-container w3-red w3-margin-top">
+<center>
+<b><h5>MEDICARE <sub>We care for your health</sub>&copy; Vidul Shukla </h5>
+<center><p>
+Sheikh Misri Road, Antop Hill,Landmark:Near Sion Koliwada Church.
+Antop Hill, Mumbai
+<br>
+Timings
+MON - SAT
+9:00 AM - 9:00 PM
+</p>
+</center>
+</footer>
+</body>
+</html>
