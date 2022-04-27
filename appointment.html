@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>Appointment</title>
+<style> 
+body {
+    background: url("form1.jpg");
+    background-size: 1400px 700px;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+}
+</style>
+
+<script>
+function validateForm()
+{
+ 
+	if(document.appointment.name.value=="")
+	{ 
+	alert("Name must be filled out");
+	document.regForm.fname.focus();
+	return(false); 
+	}
+	
+	if(document.appointment.Department.value==-1)
+	{
+	alert("Select Department");
+	document.appointment.Department.focus();
+	return(false);
+	}
+	
+	if(document.appointment.Doctor.value==-1)
+	{
+	alert("Select Doctor");
+	document.appointment.Doctor.focus();
+	return(false);
+	}
+	
+
+	var x=document.appointment.Mobile Number.value;
+	if(x="" || x!=10)
+	{
+	alert("Enter correct mobile number.");
+	document.regForm.mobile.focus;
+	return(false);
+	}
+	return(true);
+	
+	var x=document.appointment.email.value;
+	atpos=x.indexOf("@");
+	dotpos=x.lastIndexOf(".");
+	if(x=="" || atpos<1 || dotpos-atpos<2)
+	{
+	alert("Enter correct email id");
+	document.regForm.email.focus();
+	return(false);
+	}
+	return(true);
+}
+</script>
+
+
+</head>
+
+<body>
+
+<pre style="font-size:16;">
+<h2><center>Patient Appointment Form</center></h2>
+<form name="appointment" onsubmit="return(validateForm())">
+<fieldset>
+<legend><b>Personal Details</legend>
+<b>
+Name of Patient: <input type="text" name="name" value="" required>
+<br>
+Gender: <input type="radio" name="gender"> Male	<input type="radio" name="gender"> Female	<input type="radio" name="gender"> Other		DoB: <input type="date">		Blood Group: <input type="character">
+
+Mobile Number: <input type="text" name="contact" value="" required>		E-mail: <input type="text" name="email">
+
+Address: <textarea name="address" rows="2" cols="100"></textarea>
+
+City:    <select name="city">
+	     <option value="-1">Choose</option>
+	     <option value="1">Mumbai</option>
+	     <option value="2">Pune</option>
+	     <option value="3">Nashik</option>
+             <option value="4">Nagpur</option>
+	     <option value="5">Kalyan</option>
+	     </select>
+
+</fieldset>
+<fieldset>
+<legend><b>Select your doctor</legend>
+Department: <select name="dept">
+	    	<option value="-1">Choose</option>			
+		<option value="1">Cardiology</option>
+		<option value="2">Neurology</option>
+		<option value="3">Ophthamology</option>
+		<option value="4">Orthodontics</option>
+		<option value="5">Physiotherapy</option>
+	    </select>
+
+Doctor:     <select name="doctor">
+		<option value="-1">Choose</option>
+		<option value="1">Dr.Ajit Kumar</option>
+		<option value="2">Dr.Archana Singh</option>
+		<option value="3">Dr.Ekantika</option>
+		<option value="4">Dr.Navneet Kumar</option>
+		<option value="5">Dr.Suchitra Yadav</option>
+		<option value="6">Dr.Sudhir Pillai</option>
+		<option value="7">Dr.V. Sudharshan</option>
+	</select>
+<hr>
+Preferred Date of Appointment: <input type="date">
+<hr>
+</fieldset>
+<center>
+<input type="submit" value="Submit">	<input type="Reset" value="Reset"> <a href="index.html"> <button type="button" > Back </button>  </a>
+</form>
+</html>
